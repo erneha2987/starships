@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Starships</title>
+</head>
+<body>
+    <h1>Starships ordered by fastest (descending):</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Model</th>
+                <th>Cargo Capacity</th>
+                <th>Slower by</th>
+                <th>Pilots</th>
+                <th>Crew</th>
+            </tr>
+        </thead>
+        <tbody id="starshipsTable">
+            <!-- Table data will be inserted here by the JavaScript -->
+        </tbody>
+    </table>
+    <script>
+        fetch('main.php')
+            .then(response => response.json())
+            .then(tableRows => {
+                document.getElementById('starshipsTable').innerHTML = tableRows;
+            });
+    </script>
+</body>
+</html>
