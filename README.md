@@ -8,6 +8,7 @@ This project displays a table of starships from the Star Wars universe ordered b
 * [Usage](#usage)
 * [API](#api)
 * [Contributing](#contributing)
+* [Output](#output)
 
 ## Installation
 
@@ -38,3 +39,6 @@ The data for the starships table is provided by a PHP script, which retrieves th
 ## Contributing
 
 If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
+
+## Output
+![Output Image](output.png)

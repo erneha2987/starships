@@ -135,9 +135,9 @@ foreach ($starships as $starship) {
     $slower_by = (($fastest_speed - $starship->getMaxAtmospheringSpeed()) / $fastest_speed) * 100;
 
     $tableRows .= "<tr>";
-    $tableRows .= "<td>" . $starship->getName() . "</td>";
-    $tableRows .= "<td>" . $starship->getModel() . "</td>";
-    $tableRows .= "<td>" . $starship->getCargoCapacity() . "</td>";
+    $tableRows .= "<td>" . ($starship->getName() ?: '-') . "</td>";
+    $tableRows .= "<td>" . ($starship->getModel() ?: '-') . "</td>";
+    $tableRows .= "<td>" . ($starship->getCargoCapacity() ?: '-') . "</td>";
     $tableRows .= "<td>" . number_format($slower_by, 2) . "%</td>";
 
     $tableRows .= "<td>";
@@ -151,11 +151,10 @@ foreach ($starships as $starship) {
     }
     $tableRows .= "</td>";
 
-    $tableRows .= "<td>" . $starship->getCrew() . "</td>";
+    $tableRows .= "<td>" . ($starship->getCrew() ?: '-') . "</td>";
     $tableRows .= "</tr>";
 }
 
 // Output the table rows as a JSON object
 header('Content-Type: application/json');
 echo json_encode($tableRows);
-
