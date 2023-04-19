@@ -41,4 +41,4 @@ The data for the starships table is provided by a PHP script, which retrieves th
 If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
 
 ## Output
-![Output Image](output.png)
+![data.png](https://drive.google.com/uc?export=view&id=13kFVJXA_QNyTdIWGpph5oVEE8_loY-_V)
